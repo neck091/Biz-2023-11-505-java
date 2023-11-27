@@ -12,8 +12,8 @@ public class PrimeG {
 					break;
 				}
 			}
-			if (index >= i) {
-				System.out.println(i + "는 소수");
+			if (index >= i +1) {
+				System.out.println(i+1 + "는 소수");
 
 			}
 		}
