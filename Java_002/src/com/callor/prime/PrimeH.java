@@ -6,18 +6,33 @@ public class PrimeH {
 		int sum = 0;
 
 		for (int i = 1; i < 100; i++) {
-
+			int num= i+1; //i 값은 1부터 99까지 인데 이 값을 2부터 100까지 변환
 			int index = 0;
-			for (index = 2; index < i + 1; index++) {
-				if ((i + 1) % index == 0) {
+			for (index = 2; index < num; index++) {
+				if ((num) % index == 0) {
 					break;
 				}
-			}
-			if (index < (i + 1)) {
+			}//소수검사 끝
+			if (index < (num)) {
 			} else {
-				sum += i + 1;
+				sum += num;
 			}
-		}
-		System.out.println(sum);
-	}
+		} //포 전체 끝
+		System.out.printf("2~100까지의 수 중 소수들의 합 : %d",sum);
+	} //메인 끝
 }
+
+
+
+
+/*
+ * 
+ * if (indew <num {
+ *  prime 아니다. 
+ *  }
+ *  else {
+ *  system ot primtln(mum은 소스\ㅜ)
+ *  
+ *  
+ */
+
