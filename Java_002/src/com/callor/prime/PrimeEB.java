@@ -13,8 +13,8 @@ public class PrimeEB {
 			for (index = 2; index < num; index++) {
 				if (num % index == 0) {
 					break;
-
 				}
+				
 
 			}
 			if (index < num) {
