@@ -12,7 +12,7 @@ public class InputG {
 		String str = "";
 
 		while (true) {
-			System.out.print("(QUIT : 끝내기) 정수 입력 >> ");
+			System.out.print("\n(QUIT : 끝내기) 정수 입력 >> ");
 			str = scan.nextLine();
 			if (str.equals("QUIT"))
 				break;
@@ -45,7 +45,7 @@ public class InputG {
 			if(i<num) {
 				System.out.printf("%d는 소수가 아님",num);
 			} else {
-				System.out.printf("%d는 소수임",num);
+				System.out.printf("%d는 소수임\n",num);
 			}
 			
 			
