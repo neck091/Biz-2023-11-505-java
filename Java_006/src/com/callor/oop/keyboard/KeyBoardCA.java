@@ -72,7 +72,7 @@ public class KeyBoardCA {
 				} // 와일 1
 			
 			System.out.println("게임을 종료할까요?");
-			System.out.println("게임을 종료하길 원치 않으시면'예'라고 답하시오.");
+			System.out.println("게임을 종료하길 원하시면'예'라고 답하시오.");
 			String str2 = scan.nextLine();
 			if(str2.equals("예")) break;
 
