@@ -32,6 +32,7 @@ public class StringC {
 		// 오픈한 data.txt 파일에 대한 정보를 scanner 과 연결해주기
 		scan = new Scanner(is);
 
+		while(scan.hasNextLine()) {
 		String line = scan.nextLine();
 		// System.out.println(line);
 
@@ -39,16 +40,19 @@ public class StringC {
 
 		int sum = 0;
 		
-			for (int i = 1; i < result.length; i++) {
-				sum += Integer.valueOf(result[i]);
-			}
-			System.out.println(sum);
+		
+		for (int i = 1; i < result.length; i++) {
+			sum += Integer.valueOf(result[i]);
+		}
+		System.out.println("총점 : "+sum);
+		}
+		
 
-			while(scan.hasnextline()) {
-				
-			}
-			
+
 		scan.close();
+
+				
+			//???
 
 	}
 
