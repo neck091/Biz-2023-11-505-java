@@ -12,7 +12,7 @@ public class NumbersH {
 		
 		Line.dLine(50);
 		System.out.println("세 과목의 점수를 입력하세요");
-	
+
 		
 		int score = numService.inputNum("첫 번째 과목점수");
 		int score1 = numService.inputNum("두 번째 과목점수");
