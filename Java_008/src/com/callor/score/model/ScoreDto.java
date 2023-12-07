@@ -1,5 +1,7 @@
 package com.callor.score.model;
 
+import java.util.List;
+
 /*
  * Dto:data transfer object
  *  data 를 저장하기(옮기기 위한, 이동하기 위한) 위한 클래스
@@ -45,6 +47,15 @@ public class ScoreDto {
 			return avg;
 			
 		}
+		
+	
+		
+		
+		
+		
+		
+		
+		
 		
 	
 

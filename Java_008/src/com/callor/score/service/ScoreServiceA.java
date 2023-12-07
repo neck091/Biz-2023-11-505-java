@@ -92,7 +92,7 @@ public class ScoreServiceA {
 		
 		/*
 		 * scores 의 type 이 무엇인가?
-		 * scores 라는 배열을 선언할 때  어떤 명령(도구)를 사용하여 선언했는가?
+		 * scores 라는 배열을 선언할 때 어떤 명령(도구)를 사용하여 선언했는가?
 		 * ScoreDto[]를 사용하여 score 선언했음.
 		 * = scores 는 ScoreDto 배열 type 이다.
 		 * scores[index] 의 type 은 무언인가
