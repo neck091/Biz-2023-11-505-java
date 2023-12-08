@@ -12,9 +12,7 @@ public class StringB {
 		System.out.println(str);
 		System.out.println(str2);
 		System.out.println(str3);
-		
-		
-		ScoreService sService = new 
+
 		
 	}
 }

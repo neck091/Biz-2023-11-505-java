@@ -1,4 +1,4 @@
-package com.callor.score.exec;
+package com.callor.score.exec.scores;
 
 import com.callor.score.service.ScoreService;
 
@@ -7,7 +7,7 @@ public class ScoreE {
 		ScoreService scoreService = new ScoreService();
 		
 		for(int i=0; i<100; i++) {
-			scoreService.inputScore(0, 100);
+		//	scoreService.inputScore(0,50);
 		}
 	}
 
