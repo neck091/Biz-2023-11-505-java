@@ -1,13 +1,23 @@
-package com.callor.score;
+package com.callor.score.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.callor.score.ScoreDto;
+import com.callor.score.utils.Line;
+
 public class ScoreService {
 
-	List<ScoreDto> scores = new ArrayList<ScoreDto>();
+	private List<ScoreDto> scores = null;
+
+	public ScoreService() {
+
+		scores = new ArrayList<ScoreDto>();
+
+	}
 
 	public void inputScore() {
+
 		int stuNum = 10;
 
 		int scoreKor = stuNum;
@@ -24,14 +34,15 @@ public class ScoreService {
 			scoreArt = (int) (Math.random() * 50) + 51;
 		}
 
-		String strStdNum = "230000";
+		String strStdNum = "23000";
+
 		if (scores.size() > 0) {
 			strStdNum = scores.get(scores.size() - 1).stdNum;
 		}
 		int intStdNum = Integer.valueOf(strStdNum.substring(2));
 		intStdNum++;
 
-		strStdNum = String.format("23%04d", intStdNum);
+		strStdNum = String.format("23%03d", intStdNum);
 
 		ScoreDto scoreDto = new ScoreDto();
 		scoreDto.stdNum = strStdNum;
@@ -42,6 +53,12 @@ public class ScoreService {
 		scoreDto.art = scoreArt;
 
 		scores.add(scoreDto);
+	}
+
+	public void inputScore(int num) {
+		for (int i = 0; i < num; i++) {
+			inputScore();
+		}
 
 	}
 
@@ -58,8 +75,8 @@ public class ScoreService {
 		int mSum = 0;
 		int msSum = 0;
 		int aSum = 0;
-		int totalSum =0;
-		float avgSum =0;
+		int totalSum = 0;
+		float avgSum = 0;
 
 		for (ScoreDto dto : scores) {
 			System.out.printf("%s\t\t", dto.stdNum);
@@ -77,9 +94,10 @@ public class ScoreService {
 			msSum += dto.music;
 			aSum += dto.art;
 			totalSum += dto.getTotal();
+			avgSum += dto.getAvg();
 		}
 		Line.sline(100);
-	
+
 		System.out.printf("총점\t\t");
 		System.out.printf("%d\t", kSum);
 		System.out.printf("%d\t", eSum);
@@ -88,15 +106,21 @@ public class ScoreService {
 		System.out.printf("%d\t", aSum);
 		System.out.printf("%d\n", totalSum);
 
-		
-		float avgAll = (float) (kSum/10+ eSum/10 + mSum/10 +msSum/10 +aSum/10);
+		float kAvg = (float) kSum / 10;
+		float eAvg = (float) eSum / 10;
+		float mAvg = (float) mSum / 10;
+		float msAvg = (float) msSum / 10;
+		float aAvg = (float) aSum / 10;
+		float avgAll = (kAvg + eAvg + mAvg + msAvg + aAvg) / 5;
+
 		System.out.printf("평균\t\t");
-		System.out.printf("%.2f\t", (float) kSum / 10);
-		System.out.printf("%.2f\t", (float) eSum / 10);
-		System.out.printf("%.2f\t", (float) mSum / 10);
-		System.out.printf("%.2f\t", (float) msSum / 10);
-		System.out.printf("%.2f\t", (float) aSum / 10);
-		System.out.printf("\t%.2f\n",avgAll/5);
+		System.out.printf("%.2f\t", kAvg);
+		System.out.printf("%.2f\t", eAvg);
+		System.out.printf("%.2f\t", mAvg);
+		System.out.printf("%.2f\t", msAvg);
+		System.out.printf("%.2f\t", aAvg);
+		System.out.printf("\t%.2f\n", avgAll);
+
 		Line.dline(100);
 	}
 }
