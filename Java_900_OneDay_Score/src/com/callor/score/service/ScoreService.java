@@ -26,13 +26,11 @@ public class ScoreService {
 		int scoreMusic = stuNum;
 		int scoreArt = stuNum;
 
-		for (int i = 0; i < stuNum; i++) {
 			scoreKor = (int) (Math.random() * 50) + 51;
 			scoreEng = (int) (Math.random() * 50) + 51;
 			scoreMath = (int) (Math.random() * 50) + 51;
 			scoreMusic = (int) (Math.random() * 50) + 51;
 			scoreArt = (int) (Math.random() * 50) + 51;
-		}
 
 		String strStdNum = "23000";
 
