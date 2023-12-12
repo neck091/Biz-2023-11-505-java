@@ -13,5 +13,6 @@ public class StudentDto {
 	public String grade;
 	public String tel;
 	public String addr;
+	
 
 }
