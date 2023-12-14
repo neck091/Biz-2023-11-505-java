@@ -16,10 +16,13 @@ public interface StudentService {
 	
 	// class를 설계할 때 참조할 method의 prototype 의 정의
 	//코드 블록{} 없음
-	public boolean inputStudent();
-	public void inputStudents();
-	public void loadStudent();
-	public void printStudent();
+	public boolean inputStudent(); //학생 정보 입력
+	public void inputStudents(); //여러 학생 정보입력
+	public void loadStudent(); // 파일에 저장된 학생정보 메모리에 보관 
+	
+	public void saveStudent(); //ㅁ ㅔ모리에 보관된 학생정보 파일 저장
+	
+	public void printStudent(); // 메모리에 보관된 학생정보 출력
 	
 
 }

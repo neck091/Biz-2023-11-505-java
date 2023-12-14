@@ -35,6 +35,7 @@ public class StudentServiceImplV1 implements StudentService {
 	// 그 요소를 return, 없으면 null을 return
 	//
 	protected StudentDto selecStdNUm(String num) {
+		// TODO : 학생정보 찾기
 		for (StudentDto std : students) {
 			if (std.num.equals(num)) {
 				return std;
@@ -48,6 +49,8 @@ public class StudentServiceImplV1 implements StudentService {
 
 	@Override
 	public boolean inputStudent() {
+		//TODO : 한 학생의 정보 입력하기
+		
 		// 키보드로 학생의 개별 정보들 (학번,이름 등등)을 입력받고 임시로 저장할 배열
 		// StdIndex enum 에 선언된 요소의 개수를 세어서 그 개수를 사용하여 inputStr 배열을 생성하기
 		String[] inputStr = new String[StdIndex.values().length];
@@ -76,6 +79,7 @@ public class StudentServiceImplV1 implements StudentService {
 		stDto.tel = inputStr[StdIndex.전화번호.getIndex()];
 		stDto.addr = inputStr[StdIndex.주소.getIndex()];
 		
+		
 		students.add(stDto);
 
 		return true;
@@ -83,7 +87,8 @@ public class StudentServiceImplV1 implements StudentService {
 
 	@Override
 	public void inputStudents() {
-		// TODO Auto-generated method stub
+		//TODO : 여러 학생의 정보 입력하기
+		
 		boolean result = true;
 		while (result) {
 			Line.dLine(100);
@@ -103,7 +108,7 @@ public class StudentServiceImplV1 implements StudentService {
 
 	@Override
 	public void printStudent() {
-		// TODO Auto-generated method stub
+		// TODO : 학생 정보 출력하기
 
 		Line.dLine(100);
 		System.out.println("한울 고교 학생 정보");
@@ -122,6 +127,12 @@ public class StudentServiceImplV1 implements StudentService {
 		}
 		Line.dLine(100);
 
+	}
+
+	@Override
+	public void saveStudent() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

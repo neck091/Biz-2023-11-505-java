@@ -1,17 +1,21 @@
 package com.callor.student.service.impl;
 
 import com.callor.student.models.MenuIndex;
+import com.callor.student.service.StudentService;
 import com.callor.student.utils.Line;
 
 public class StartServiceImplV2 extends StartServiceImplV1 {
-	public StartServiceImplV2() {
+	
+	public StartServiceImplV2(StudentService stService) {
 
 		// V1의 생성자를 추출하여 V1 생성자에 있는 코드를 그대로 실행하겠다
-		super();
+		super(stService);
 		//V1에서는 St... ServiceImplV1 을 사용하여 stService 를 초기화
 		//하지만 여기서는 InmplV2 를 사용하고 싶다
 		//그럴때는 다시 stService를 V2 로 초기화 하면 됨.
-		//stService = new StudentServiceImplV2();
+		//this.stService = stService;
+				//new StudentServiceImplV2();
+		
 	}
 
 	@Override

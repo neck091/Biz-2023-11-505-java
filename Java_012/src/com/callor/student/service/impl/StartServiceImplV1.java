@@ -7,12 +7,22 @@ import com.callor.student.service.StudentService;
 import com.callor.student.utils.Line;
 
 public class StartServiceImplV1 implements StartService {
+	
 	protected Scanner scan = null;
 	protected StudentService stService = null;
 	
-	public StartServiceImplV1() {
+	public StartServiceImplV1(StudentService stService) {
+	
 		scan = new Scanner(System.in);
-		stService = new StudentServiceImplV1();
+		this.stService = stService ; 
+		/*
+		 * new StudentServiceImplV1();
+		 * 
+		 * StartService 와 StudentService가 연동되어 둘 중 하나를 바꾸면 다 바꿔야함
+		 * 이러한 상황을 StartService 와 StudentService 간에 결합도가 높다라고 한다
+		 * 
+		 * 그래서 StartService 의 생성자를 통해 StudentService 의 객체를 주입받은 Inject 코드로 생성자 변경
+		 */
 
 	}
 

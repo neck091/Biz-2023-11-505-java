@@ -10,8 +10,9 @@ package com.callor.student.service;
 public interface StartService {
 	
 	//추상메서드 : 코드블럭( { } ) 이 없는 메서드
-	public void mainMenu(); 
+	public void mainMenu();//String version 
 	public Integer selectMenu();
 	public void startApp();
+
 
 }
