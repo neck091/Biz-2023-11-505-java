@@ -29,7 +29,6 @@ public class StudentService {
 			e.printStackTrace();
 		}
 		scan = new Scanner(is);
-
 	}
 
 	public void StudentList() {
@@ -52,7 +51,7 @@ public class StudentService {
 			students.add(studentDto);
 
 		}
-
+		
 	}
 
 	public void findStudent() {
