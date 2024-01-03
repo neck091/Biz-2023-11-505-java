@@ -13,6 +13,10 @@ public class GuidServiceImplV1 implements GuideService {
 	List<GuideDto> guideList = null;
 	String dataFile = null;
 	InputStream is = null;
+	
+	public GuidServiceImplV1() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public GuidServiceImplV1(String dataFile) {
 		this.dataFile = dataFile;
